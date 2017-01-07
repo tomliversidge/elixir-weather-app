@@ -1,7 +1,7 @@
 defmodule Tempy.Worker do
   def loop do
     receive do
-      {:sender_pid, location} -> send(sender_pid, {:ok, temperature_in(location)})
+      {sender_pid, location} -> send(sender_pid, {:ok, temperature_in(location)})
       _ -> IO.puts "unknown message"
     end
     loop
