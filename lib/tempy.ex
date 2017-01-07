@@ -1,0 +1,2 @@
+defmodule Tempy do
+end
